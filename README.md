@@ -1,2 +1,2 @@
-# ultri-
+# Ultri
 Ultri app framework
