@@ -1,0 +1,19 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - yarn install
+            - yarn global add @quasar/cli
+        build:
+          commands:
+            - quasar build -m spa
+      artifacts:
+        baseDirectory: dist/spa
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: app
