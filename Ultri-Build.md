@@ -557,4 +557,30 @@ brian@Doghouse:~/sandbox/ultri/app$ amplify push
 ? Are you sure you want to continue? Yes
 ```
 
-### Connect
+## Create a Quasar release
+
+### Start the Release
+
+```sh
+git hf release start v0.2.0
+```
+
+### Publish the Release
+
+```sh
+git hf release finish 'v0.2.0'
+```
+
+## Create a Custom UI
+
+### Start the feature
+
+```sh
+git hf feature start custom-ui
+```
+
+### Finish the Custom UI feature
+
+```sh
+git hf feature finish custom-ui
+```
