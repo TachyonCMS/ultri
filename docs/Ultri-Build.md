@@ -557,6 +557,7 @@ brian@Doghouse:~/sandbox/ultri/app$ amplify push
 ? Are you sure you want to continue? Yes
 ```
 
+<<<<<<< HEAD:Ultri-Build.md
 ### Add Test Enviro
 
 ```sh
@@ -589,6 +590,7 @@ brian@Doghouse:~/sandbox/ultri/app$ amplify push
 ? Are you sure you want to continue? Yes
 ```
 
+ature/custom-ui:docs/Ultri-Build.md
 ## Create a Quasar release
 
 ### Start the Release
