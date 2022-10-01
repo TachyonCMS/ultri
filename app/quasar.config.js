@@ -77,6 +77,10 @@ module.exports = configure(function (/* ctx */) {
       // distDir
 
       // extendViteConf (viteConf) {},
+      extendViteConf(viteConf) {
+        viteConf.resolve.alias["./runtimeConfig"] = "./runtimeConfig.browser";
+        console.log(viteConf);
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [
