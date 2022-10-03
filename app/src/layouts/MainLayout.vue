@@ -315,7 +315,7 @@ const setPrimaryColor = (hexCode) => {
     console.log("DRAWER: " + drawerColor.value);
     onDrawerColor.value =
       brightness(drawerColor.value) > 128 ? darkText.value : lightText.value;
-    drawerPaper.value = lighten(hexCode, 90);
+    drawerPaper.value = lighten(hexCode, 85);
     onDrawerPaper.value =
       brightness(drawerPaper.value) > 128 ? darkText.value : lightText.value;
 
