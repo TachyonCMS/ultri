@@ -1,7 +1,7 @@
 <template>
   <q-card class="bg-card-paper on-card-paper">
     <form>
-      <q-card-section
+      <q-card-section header
         class="text-center justify-center"
         v-if="view == 'access'"
       >
@@ -310,7 +310,6 @@
             </q-tab-panel>
           </q-tab-panels>
         </div>
-
         <div v-if="view == 'passwdReset'">
           <div v-if="resetStage == 'enterUsername'">
             <div class="row col-12 justify-center text-center">
@@ -506,7 +505,7 @@ const platformSignUp = async () => {
       commonName: commonName.value, // optional
     };
     await signUp(userObj);
-    // router.push("/auth/signup/confirm");
+    router.push("/auth/signup/confirm");
   } catch (e) {
     console.error(e);
     errors.value = [e];
