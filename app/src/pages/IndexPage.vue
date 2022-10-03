@@ -6,7 +6,7 @@
           Express yourself
         </h1></q-card-section
       >
-      <template v-if="!userStore.isSignedIn">
+      <template v-if="!userStore.isSignedIn()">
         <q-card-section
           ><h2 class="q-ma-sm q-ma-sm-md q-ma-md-lg q-ma-lg-xl">
             Start sharing today.
