@@ -25,13 +25,7 @@ export default function useAuth() {
           break;
         case "signOut":
           logger.info("user signed out");
-          userStore.$patch({
-            username: null,
-            email: null,
-            fullname: null,
-            userId: null,
-            authenticated: false
-          });
+          clearStores();
           break;
         case "signIn_failure":
           logger.error("user sign in failed");
@@ -57,6 +51,16 @@ export default function useAuth() {
 
     Hub.listen("auth", authListener);
   };
+
+  function clearStores() {
+    userStore.$patch({
+      username: null,
+      email: null,
+      fullname: null,
+      userId: null,
+      authenticated: false
+    });
+  }
 
   function patchUser(data) {
     userStore.$patch({
