@@ -2,6 +2,40 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
-}
+  accentColor: "Accent Color",
+  add: "Add",
+  primaryColor: "Primary Color",
+  callToAction: "Call to Action",
+  close: "Close",
+  colorCTA: "CTA Color",
+  colorDarker: "Darker Color",
+  colorLighter: "Lighter Color",
+  colorLightest: "Lightest Color",
+  cardPaper: "Card Paper Color",
+  cardSurround: "Card Surrounding Color",
+  create: "Create",
+  ctaColor: "CTA Color",
+  customize: "Customize",
+  darkMode: "Dark Mode",
+  delete: "Delete",
+  email: "Email Address",
+  error: "Error",
+  failed: "Failure",
+  info: "Info",
+  lostPassword: "Lost Password?",
+  open: "Open",
+  passphrase: "Passphrase",
+  password: "Password",
+  repeatPassphrase: "Repeat Passphrase",
+  repeatPassword: "Repeat Password",
+  save: "Save",
+  secondaryColor: "Secondary Color",
+  signin: "Sign In",
+  signout: "Sign Out",
+  signup: "Sign Up",
+  sorry: "Sorry",
+  success: "Success",
+  telephone: "Telephone",
+  username: "Username",
+  warning: "Warning"
+};

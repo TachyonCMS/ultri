@@ -42,7 +42,7 @@ module.exports = configure(function (/* ctx */) {
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
-      // 'mdi-v5',
+      'mdi-v5',
       // 'fontawesome-v6',
       // 'eva-icons',
       // 'themify',
@@ -96,13 +96,13 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
-      // https: true
+      https: true,
       open: true // opens browser window automatically
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
     framework: {
-      config: {},
+      config: {  },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
@@ -113,9 +113,10 @@ module.exports = configure(function (/* ctx */) {
       //
       // components: [],
       // directives: [],
+      cssAddon: true, // Adds the flex responsive++ CSS classes (noticeable bump in footprint)
 
       // Quasar plugins
-      plugins: []
+      plugins: ["Notify", "Meta", "Loading", "Dialog"]
     },
 
     // animations: 'all', // --- includes all animations
