@@ -3,8 +3,8 @@
     <q-item-label header class="text-h6">Features and Benefits</q-item-label>
     <q-separator></q-separator>
     <q-expansion-item group="benefits" icon="code" label="Open Source">
-      <q-card>
-        <q-card-section>
+      <q-card class="bg-drawer-paper">
+        <q-card-section >
           All of our code is open source and available on
           <a href="https://github.com/TachyonCMS/tachyoncms" class="nolink"
             >GitHub</a
@@ -23,7 +23,7 @@
     <q-separator></q-separator>
 
     <q-expansion-item group="benefits" icon="mdi-lead-pencil" label="Better Blogging">
-      <q-card>
+      <q-card class="bg-drawer-paper">
         <q-card-section>
           <p>Dedicated to a building a better blogging experience.</p>
           <ul>
@@ -46,7 +46,7 @@
       icon="mdi-web"
       label="Static Site Generator"
     >
-      <q-card>
+      <q-card class="bg-drawer-paper">
         <q-card-section>
           <p>
             Static sites are optimal for speed and SEO. Each website pages has
@@ -70,7 +70,7 @@
       icon="mdi-monitor-off"
       label="Headless CMS"
     >
-      <q-card>
+      <q-card class="bg-drawer-paper">
         <q-card-section>
           <p>
             Sometimes its all about the data, for that we support headless mode.
@@ -92,7 +92,7 @@
       icon="mdi-folder-multiple-plus-outline"
       label="Local Project Support"
     >
-      <q-card>
+      <q-card class="bg-drawer-paper">
         <q-card-section>
           <p>Manage local content with zero installation.</p>
           <ul>
@@ -116,7 +116,7 @@
       icon="mdi-tools"
       label="Best-in-Class Tools"
     >
-      <q-card>
+      <q-card class="bg-drawer-paper">
         <q-card-section>
           <p>
             Built on top of the best, cutting edge web technolgies and tools.
