@@ -557,6 +557,40 @@ brian@Doghouse:~/sandbox/ultri/app$ amplify push
 ? Are you sure you want to continue? Yes
 ```
 
+<<<<<<< HEAD:Ultri-Build.md
+### Add Test Enviro
+
+```sh
+amplify env add
+```
+
+```sh
+? Enter a name for the environment test
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+```
+
+#### Deploy Test Backend
+
+```sh
+brian@Doghouse:~/sandbox/ultri/app$ amplify push
+✔ Successfully pulled backend environment prod from the cloud.
+
+    Current Environment: prod
+
+┌──────────┬────────────────────┬───────────┬───────────────────┐
+│ Category │ Resource name      │ Operation │ Provider plugin   │
+├──────────┼────────────────────┼───────────┼───────────────────┤
+│ Auth     │ userPoolGroups     │ Create    │ awscloudformation │
+├──────────┼────────────────────┼───────────┼───────────────────┤
+│ Auth     │ ultriauthorization │ Create    │ awscloudformation │
+├──────────┼────────────────────┼───────────┼───────────────────┤
+│ Hosting  │ amplifyhosting     │ No Change │                   │
+└──────────┴────────────────────┴───────────┴───────────────────┘
+? Are you sure you want to continue? Yes
+```
+
+ature/custom-ui:docs/Ultri-Build.md
 ## Create a Quasar release
 
 ### Start the Release
