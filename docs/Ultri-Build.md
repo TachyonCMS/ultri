@@ -1,4 +1,4 @@
-# Ultri BuildCreate an AWS Amplify user
+# Ultri Build
 
 ## Install Tools and Prerequisites
 
