@@ -68,7 +68,7 @@ const routes = [
     children: [
       { path: "", component: () => import("pages/user/DashboardPage.vue") }
     ],
-    meta: { appDrawer: "EntryDrawer", requiresAuth: true }
+    meta: { appDrawer: null, requiresAuth: true }
   },
   /**
   {

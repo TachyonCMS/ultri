@@ -457,12 +457,13 @@ const displayNotification = async (notification) => {
   });
 };
 // DRAWER
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 // Potential left drawer content
 import MainDrawer from "./drawers/MainDrawer.vue";
 import EntryDrawer from "./drawers/EntryDrawer.vue";
 import BenefitsDrawer from "./drawers/BenefitsDrawer.vue";
 const route = useRoute();
+const router = useRouter();
 console.log(route.meta.appDrawer);
 // Mange left drawer state
 const leftDrawerOpen = ref(false);
@@ -541,18 +542,19 @@ const resetApp = () => {
   console.log("resetting app");
   colorStore.$patch({
     darkMode: false,
-    primaryColor: '#1976D2',
-    secondaryColor: '#26A69A',
-    accentColor: '#9C27B0',
-    ctaColor: '#F00',
+    primaryColor: "#1976D2",
+    secondaryColor: "#26A69A",
+    accentColor: "#9C27B0",
+    ctaColor: "#F00",
     glossy: false,
   });
   layoutStore.$patch({
-    title: 'Ultri'
+    title: "Ultri",
   });
   i18nStore.$patch({
-    locale: 'en-US'
+    locale: "en-US",
   });
+  router.push("/");
 };
 
 // Account Button - create account | login } logout | password change

@@ -1,9 +1,9 @@
 <template>
   <q-list bordered>
-    <q-item-label header class="text-h6">Features and Benefits</q-item-label>
+    <q-item-label header class="text-h6">Coming Soon</q-item-label>
     <q-separator></q-separator>
     <q-expansion-item
-      group="benefits"
+      group="soon"
       icon="code"
       label="Open Source"
     >
@@ -26,7 +26,7 @@
 
  <q-expansion-item
       group="benefits"
-      icon="mdi-post"
+      icon="mdi-folder-multiple-plus-outline"
       label="Better Blogging"
     >
       <q-card>
