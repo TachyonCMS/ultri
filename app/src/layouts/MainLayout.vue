@@ -9,6 +9,7 @@
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
+          v-if="route.meta.appDrawer"
         />
 
         <q-toolbar-title>
@@ -17,16 +18,17 @@
           }}</router-link>
         </q-toolbar-title>
 
-        <AccountButton></AccountButton>
+        <AccountButton @signedOut="resetApp()"></AccountButton>
         <q-btn-dropdown dropdown-icon="mdi-cog" size="md" class="q-px-sm">
           <q-list bordered padding>
             <q-item-label header>{{ $t("customize") }}</q-item-label>
+            <!--
             <q-item>
               <q-item-section class="text-no-wrap">
                 <LanguageSwitcher></LanguageSwitcher>
               </q-item-section>
             </q-item>
-
+            -->
             <q-item>
               <q-item-section class="text-no-wrap">
                 <q-toggle
@@ -54,18 +56,19 @@
       show-if-above
       bordered
       class="bg-drawer on-drawer"
+      v-if="route.meta.appDrawer"
     >
       <MainDrawer
         v-if="route.meta.appDrawer == 'MainDrawer'"
-        class="bg-drawer-paper on-drawer-paper"
+        class="bg-drawer on-drawer"
       ></MainDrawer>
       <EntryDrawer
         v-if="route.meta.appDrawer == 'EntryDrawer'"
-        class="bg-drawer-paper on-drawer-paper"
+        class="bg-drawer on-drawer"
       ></EntryDrawer>
       <BenefitsDrawer
         v-if="route.meta.appDrawer == 'BenefitsDrawer'"
-        class="bg-drawer-paper on-drawer-paper"
+        class="bg-drawer on-drawer"
       ></BenefitsDrawer>
     </q-drawer>
 
@@ -309,7 +312,7 @@ const setPrimaryColor = (hexCode) => {
     console.log("DRAWER: " + drawerColor.value);
     onDrawerColor.value =
       brightness(drawerColor.value) > 128 ? darkText.value : lightText.value;
-    drawerPaper.value = lighten(hexCode, 73);
+    drawerPaper.value = lighten(hexCode, 90);
     onDrawerPaper.value =
       brightness(drawerPaper.value) > 128 ? darkText.value : lightText.value;
 
@@ -468,7 +471,7 @@ function toggleLeftDrawer() {
 }
 
 // I18N - Allow choosing an App UI language, content language MAY NOT be affected.
-import LanguageSwitcher from "components/LanguageSwitcher.vue";
+//import LanguageSwitcher from "components/LanguageSwitcher.vue";
 
 // Change the secondary color and shades
 const setAccentColor = (hexCode) => {
@@ -533,6 +536,24 @@ watchEffect(() => {
     setCtaColor(currCtaColor.value);
   }
 });
+
+const resetApp = () => {
+  console.log("resetting app");
+  colorStore.$patch({
+    darkMode: false,
+    primaryColor: '#1976D2',
+    secondaryColor: '#26A69A',
+    accentColor: '#9C27B0',
+    ctaColor: '#F00',
+    glossy: false,
+  });
+  layoutStore.$patch({
+    title: 'Ultri'
+  });
+  i18nStore.$patch({
+    locale: 'en-US'
+  });
+};
 
 // Account Button - create account | login } logout | password change
 import AccountButton from "components/AccountButton.vue";

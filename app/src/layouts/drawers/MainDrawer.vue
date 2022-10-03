@@ -1,6 +1,6 @@
 <template>
   <q-list bordered>
-    <q-item-label header class="text-body1">TachyonCMS Benefits</q-item-label>
+    <q-item-label header class="text-h6">Features and Benefits</q-item-label>
     <q-separator></q-separator>
     <q-expansion-item group="benefits" icon="code" label="Open Source">
       <q-card>
