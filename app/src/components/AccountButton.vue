@@ -54,12 +54,11 @@
 import { useQuasar } from "quasar";
 const $q = useQuasar();
 
+const emit = defineEmits(["signedOut"]);
+
 // USER Store - info about the auth user
 import { useUserStore } from "../stores/user";
 const userStore = useUserStore();
-
-//import { Authenticator, useAuthenticator } from "@aws-amplify/ui-vue";
-//const auth = useAuthenticator();
 
 import useAuth from "../composables/useAuth";
 const { signOut } = useAuth();
@@ -67,6 +66,7 @@ const { signOut } = useAuth();
 const platformSignOut = async () => {
   console.log("LOGOUT");
   await signOut();
+  emit('signedOut');
 };
 </script>
 
