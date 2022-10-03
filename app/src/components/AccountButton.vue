@@ -18,11 +18,13 @@
             $t("Dashboard")
           }}</q-item-section>
         </q-item>
+        <!--
         <q-item clickable v-close-popup to="/user/profile">
           <q-item-section class="text-no-wrap">{{
             $t("Profile")
           }}</q-item-section>
         </q-item>
+        -->
         <q-item clickable v-close-popup to="/auth/change_password">
           <q-item-section class="text-no-wrap">{{
             $t("Password")
