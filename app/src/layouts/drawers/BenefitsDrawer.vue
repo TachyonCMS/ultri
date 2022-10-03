@@ -22,7 +22,7 @@
 
     <q-separator></q-separator>
 
-    <q-expansion-item group="benefits" icon="mdi-post" label="Better Blogging">
+    <q-expansion-item group="benefits" icon="mdi-lead-pencil" label="Better Blogging">
       <q-card>
         <q-card-section>
           <p>Dedicated to a building a better blogging experience.</p>
@@ -43,7 +43,7 @@
 
     <q-expansion-item
       group="benefits"
-      icon="mdi-post"
+      icon="mdi-web"
       label="Static Site Generator"
     >
       <q-card>
@@ -67,7 +67,7 @@
 
     <q-expansion-item
       group="benefits"
-      icon="mdi-post"
+      icon="mdi-monitor-off"
       label="Headless CMS"
     >
       <q-card>
@@ -126,6 +126,7 @@
             <li>AWS Amplify and AWS Services</li>
             <li>Editor.js</li>
             <li>JSON Editor</li>
+            <li>Built-in camera and screen tools.</li>
           </ul>
           <p></p>
         </q-card-section>
