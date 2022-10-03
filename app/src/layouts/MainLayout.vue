@@ -33,17 +33,20 @@
               <q-item-section class="text-no-wrap">
                 <q-toggle
                   v-model="colorStore.darkMode"
-                  color="$primary"
+                  color="grey-6"
                   :label="$t('darkMode')"
                   left-label
                   size="sm"
+                  :true-value="false"
+                  :false-value="true"
+                  :dark="colorStore.darkMode"
                 ></q-toggle>
               </q-item-section>
             </q-item>
             <!-- Color switcher -->
             <q-item>
-              <q-item-section class="text-no-wrap">
-                <ColorSwitcher disabled="true"></ColorSwitcher>
+              <q-item-section class="text-no-wrap cursor-pointer">
+                <ColorSwitcher></ColorSwitcher>
               </q-item-section>
             </q-item>
           </q-list>
