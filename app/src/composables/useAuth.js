@@ -109,6 +109,10 @@ export default function useAuth() {
       ) {
         msg = "You must provide a username";
       } else if (
+        error.name == 'UserNotConfirmedException'
+      ) {
+        msg = "The user is not confirmed. Check your email for a confirmation code, enter it in the Signup Confirmation Form";
+      } else if (
         error.message.indexOf(
           "Custom auth lambda trigger is not configured"
         ) !== -1

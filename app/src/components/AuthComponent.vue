@@ -1,7 +1,8 @@
 <template>
   <q-card class="bg-card-paper on-card-paper">
     <form>
-      <q-card-section header
+      <q-card-section
+        header
         class="text-center justify-center"
         v-if="view == 'access'"
       >
@@ -272,11 +273,27 @@
           <li
             v-for="(error, ix) in errors"
             :key="ix"
-            class="text-body1 text-weight-bold"
+            class="text-body1 text-weight-bold q-mx-md"
           >
             {{ error }}
           </li>
         </ul>
+      </div>
+
+      <div
+        class="row col-12 text-center justify-center"
+        v-if="
+          errors.length > 0 &&
+          errors[0].indexOf('Signup Confirmation Form') !== -1
+        "
+      >
+        <q-btn
+          class="text-card-subdued text-body1"
+          flat
+          no-caps
+          to="/auth/signup/confirm"
+          >Signup Confirmation Form</q-btn
+        >
       </div>
 
       <q-card-actions class="text-center justify-center">
