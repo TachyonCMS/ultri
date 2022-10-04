@@ -557,7 +557,6 @@ brian@Doghouse:~/sandbox/ultri/app$ amplify push
 ? Are you sure you want to continue? Yes
 ```
 
-<<<<<<< HEAD:Ultri-Build.md
 ### Add Test Enviro
 
 ```sh
@@ -618,3 +617,13 @@ git hf feature start custom-ui
 ```sh
 git hf feature finish custom-ui
 ```
+
+## Add a SPA rewrite
+
+In the **Amplify Web Console** add a rewrite under the App settings.
+
+**Source adress:** `</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|woff2|ttf|map|json|webp)$)([^.]+$)/>`
+
+**Target address:** `/index.html`
+
+**Type:** 200 (Rewrite)

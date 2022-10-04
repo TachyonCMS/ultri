@@ -14,7 +14,7 @@
             <li>Run your own server.</li>
             <li>Contribute enhancements.</li>
             <li>Build apps for the marketplace.</li>
-            <li>Support open source development.</li>
+            <li>Supports open source development.</li>
           </ul>
         </q-card-section>
       </q-card>
