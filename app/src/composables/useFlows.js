@@ -58,17 +58,35 @@ export default function useFlows() {
 
   /**
    * FLOW FUNCTIONALITY
-   *
-   * We expose a simple paradigm of save, delete and query, not CRUD.
    */
 
-  const saveFlow = async (flow) => {
+  const createFlow = async (flow) => {
     try {
       // @todo Validate busines logic so strategies only deal with correctness.
-      strategies[strategy].saveFlow(options);
+      strategies[strategy].createFlow(options);
     } catch (e) {
       logger.error(e);
-      throw Error("error_failed_to_save_flow");
+      throw Error("error_failed_to_create_flow");
+    }
+  };
+
+  const readFlow = async (flowId, options = null) => {
+    try {
+      // @todo Validate options
+      strategies[strategy].readFlow(flowId, options);
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_read_flow");
+    }
+  };
+
+  const updateFlow = async (flow) => {
+    try {
+      // @todo Validate busines logic so strategies only deal with correctness.
+      strategies[strategy].updateFlow(options);
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_update_flow");
     }
   };
 
@@ -78,16 +96,6 @@ export default function useFlows() {
     } catch (e) {
       logger.error(e);
       throw Error("error_failed_to_delete_flow");
-    }
-  };
-
-  const queryFlow = async (flowId, options = null) => {
-    try {
-      // @todo Validate options
-      strategies[strategy].queryFlow(flowId, options);
-    } catch (e) {
-      logger.error(e);
-      throw Error("error_failed_to_query_flow");
     }
   };
 
@@ -103,17 +111,35 @@ export default function useFlows() {
 
   /**
    * NUGGET FUNCTIONALITY
-   *
-   * We expose a simple paradigm of save, delete and query, not CRUD.
    */
 
-  const saveNugget = async (nugget) => {
+  const createNugget = async (nugget) => {
     try {
       // @todo Validate busines logic so strategies only deal with correctness.
-      strategies[strategy].saveNugget(options);
+      strategies[strategy].createNugget(options);
     } catch (e) {
       logger.error(e);
-      throw Error("error_failed_to_save_nugget");
+      throw Error("error_failed_to_create_nugget");
+    }
+  };
+
+  const readNugget = async (nuggetId, options = null) => {
+    try {
+      // @todo Validate options
+      strategies[strategy].readNugget(nuggetId, options);
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_read_nugget");
+    }
+  };
+
+  const updateNugget = async (nugget) => {
+    try {
+      // @todo Validate busines logic so strategies only deal with correctness.
+      strategies[strategy].updateNugget(options);
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_update_nugget");
     }
   };
 
@@ -123,16 +149,6 @@ export default function useFlows() {
     } catch (e) {
       logger.error(e);
       throw Error("error_failed_to_delete_nugget");
-    }
-  };
-
-  const queryNugget = async (nuggetId, options = null) => {
-    try {
-      // @todo Validate options
-      strategies[strategy].queryNugget(nuggetId, options);
-    } catch (e) {
-      logger.error(e);
-      throw Error("error_failed_to_query_nugget");
     }
   };
 
@@ -148,18 +164,36 @@ export default function useFlows() {
 
   /**
    * ASSET FUNCTIONALITY
-   *
-   * We expose a simple paradigm of save, delete and query, not CRUD.
    * Note: Am "asset" here is reference to an S3 file, these operations update the database.
    */
 
-  const saveAsset = async (asset) => {
+  const createAsset = async (asset) => {
     try {
       // @todo Validate busines logic so strategies only deal with correctness.
-      strategies[strategy].saveAsset(options);
+      strategies[strategy].createAsset(options);
     } catch (e) {
       logger.error(e);
-      throw Error("error_failed_to_save_asset");
+      throw Error("error_failed_to_create_asset");
+    }
+  };
+
+  const readAsset = async (assetId, options = null) => {
+    try {
+      // @todo Validate options
+      strategies[strategy].readAsset(assetId, options);
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_read_asset");
+    }
+  };
+
+  const updateAsset = async (asset) => {
+    try {
+      // @todo Validate busines logic so strategies only deal with correctness.
+      strategies[strategy].updateAsset(options);
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_update_asset");
     }
   };
 
@@ -169,16 +203,6 @@ export default function useFlows() {
     } catch (e) {
       logger.error(e);
       throw Error("error_failed_to_delete_asset");
-    }
-  };
-
-  const queryAsset = async (assetId, options = null) => {
-    try {
-      // @todo Validate options
-      strategies[strategy].queryAsset(assetId, options);
-    } catch (e) {
-      logger.error(e);
-      throw Error("error_failed_to_query_asset");
     }
   };
 
@@ -216,19 +240,22 @@ export default function useFlows() {
     setStrategy,
     initStrategy,
     // Flow Functionality
-    saveFlow,
+    createFlow,
+    readFlow,
+    updateFlow,
     deleteFlow,
-    queryFlow,
     queryFlows,
     // Nugget Functionality
-    saveNugget,
+    createNugget,
+    readNugget,
+    updateNugget,
     deleteNugget,
-    queryNugget,
     queryNuggets,
     // Asset Functionality
-    saveAsset,
+    createAsset,
+    readAsset,
+    updateAsset,
     deleteAsset,
-    queryAsset,
     queryAssets,
     // File handling
     uploadFile,

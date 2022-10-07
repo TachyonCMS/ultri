@@ -2,107 +2,113 @@ import { Logger } from "aws-amplify";
 const logger = new Logger("FlowsElectronApiLogger");
 
 export default function useFlowsElectronApi() {
-/**
+  /**
    * FLOW FUNCTIONALITY
-   *
-   * We expose a simple paradigm of save, delete and query, not CRUD.
    */
 
- const saveFlow = async (flow) => {
-  try {
+   const createFlow = async (flow) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_create_flow");
+    }
+  };
 
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_save_flow");
-  }
-};
+  const readFlow = async (flowId, options = null) => {
+    try {
+      // @todo Validate options
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_read_flow");
+    }
+  };
 
-const deleteFlow = async (flowId) => {
-  try {
+  const updateFlow = async (flow) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_update_flow");
+    }
+  };
 
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_delete_flow");
-  }
-};
+  const deleteFlow = async (flowId) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_delete_flow");
+    }
+  };
 
-const queryFlow = async (flowId, options = null) => {
-  try {
-    // @todo Validate options
+  const queryFlows = async (options) => {
+    try {
+      // @todo Validate options
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_query_flows");
+    }
+  };
 
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_query_flow");
-  }
-};
+  /**
+   * NUGGET FUNCTIONALITY
+   */
 
-const queryFlows = async (options) => {
-  try {
-    // @todo Validate options
+  const createNugget = async (nugget) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_create_nugget");
+    }
+  };
 
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_query_flows");
-  }
-};
+  const readNugget = async (nuggetId, options = null) => {
+    try {
+      // @todo Validate options
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_read_nugget");
+    }
+  };
 
+  const updateNugget = async (nugget) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_update_nugget");
+    }
+  };
 
-/**
- * NUGGET FUNCTIONALITY
- *
- * We expose a simple paradigm of save, delete and query, not CRUD.
- */
+  const deleteNugget = async (nuggetId) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_delete_nugget");
+    }
+  };
 
- const saveNugget = async (nugget) => {
-  try {
+  const queryNuggets = async (options = null) => {
+    try {
+      // @todo Validate options
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_query_nuggets");
+    }
+  };
 
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_save_nugget");
-  }
-};
-
-const deleteNugget = async (nuggetId) => {
-  try {
-
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_delete_nugget");
-  }
-};
-
-const queryNugget = async (nuggetId, options = null) => {
-  try {
-    // @todo Validate options
-
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_query_nugget");
-  }
-};
-
-const queryNuggets = async (options = null) => {
-  try {
-    // @todo Validate options
-
-  } catch (e) {
-    logger.error(e);
-    throw Error("error_failed_to_query_nuggets");
-  }
-};
-
-return {
-  // Init
-  init,
-  // Flow Functionality
-  saveFlow,
-  deleteFlow,
-  queryFlow,
-  queryFlows,
-  // Nugget Functionality
-  saveNugget,
-  deleteNugget,
-  queryNugget,
-  queryNuggets
-};
+  return {
+    // Init
+    init,
+    // Flow Functionality
+    createFlow,
+    readFlow,
+    updateFlow,
+    deleteFlow,
+    queryFlows,
+    // Nugget Functionality
+    createNugget,
+    readNugget,
+    updateNugget,
+    createNugget,
+    queryNuggets
+  };
 }
+

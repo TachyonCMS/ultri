@@ -4,15 +4,30 @@ const logger = new Logger("FlowsFileSystemLogger");
 export default function useFlowsFileSystem() {
   /**
    * FLOW FUNCTIONALITY
-   *
-   * We expose a simple paradigm of save, delete and query, not CRUD.
    */
 
-  const saveFlow = async (flow) => {
+   const createFlow = async (flow) => {
     try {
     } catch (e) {
       logger.error(e);
-      throw Error("error_failed_to_save_flow");
+      throw Error("error_failed_to_create_flow");
+    }
+  };
+
+  const readFlow = async (flowId, options = null) => {
+    try {
+      // @todo Validate options
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_read_flow");
+    }
+  };
+
+  const updateFlow = async (flow) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_update_flow");
     }
   };
 
@@ -21,15 +36,6 @@ export default function useFlowsFileSystem() {
     } catch (e) {
       logger.error(e);
       throw Error("error_failed_to_delete_flow");
-    }
-  };
-
-  const queryFlow = async (flowId, options = null) => {
-    try {
-      // @todo Validate options
-    } catch (e) {
-      logger.error(e);
-      throw Error("error_failed_to_query_flow");
     }
   };
 
@@ -44,15 +50,30 @@ export default function useFlowsFileSystem() {
 
   /**
    * NUGGET FUNCTIONALITY
-   *
-   * We expose a simple paradigm of save, delete and query, not CRUD.
    */
 
-  const saveNugget = async (nugget) => {
+  const createNugget = async (nugget) => {
     try {
     } catch (e) {
       logger.error(e);
-      throw Error("error_failed_to_save_nugget");
+      throw Error("error_failed_to_create_nugget");
+    }
+  };
+
+  const readNugget = async (nuggetId, options = null) => {
+    try {
+      // @todo Validate options
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_read_nugget");
+    }
+  };
+
+  const updateNugget = async (nugget) => {
+    try {
+    } catch (e) {
+      logger.error(e);
+      throw Error("error_failed_to_update_nugget");
     }
   };
 
@@ -61,15 +82,6 @@ export default function useFlowsFileSystem() {
     } catch (e) {
       logger.error(e);
       throw Error("error_failed_to_delete_nugget");
-    }
-  };
-
-  const queryNugget = async (nuggetId, options = null) => {
-    try {
-      // @todo Validate options
-    } catch (e) {
-      logger.error(e);
-      throw Error("error_failed_to_query_nugget");
     }
   };
 
@@ -86,14 +98,17 @@ export default function useFlowsFileSystem() {
     // Init
     init,
     // Flow Functionality
-    saveFlow,
+    createFlow,
+    readFlow,
+    updateFlow,
     deleteFlow,
-    queryFlow,
     queryFlows,
     // Nugget Functionality
-    saveNugget,
-    deleteNugget,
-    queryNugget,
+    createNugget,
+    readNugget,
+    updateNugget,
+    createNugget,
     queryNuggets
   };
 }
+
